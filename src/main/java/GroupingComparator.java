@@ -1,6 +1,6 @@
 import org.apache.hadoop.io.WritableComparable;
 
-public class GroupingComparator {
+public class GroupingComparator  {
     protected GroupingComparator(){
      super(AirWritable.class, true);
     }
