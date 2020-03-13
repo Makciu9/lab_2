@@ -56,6 +56,8 @@ public class AirWritable implements WritableComparable {
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-
+        flag = dataInput.readInt();
+        code = dataInput.readInt();
     }
+
 }

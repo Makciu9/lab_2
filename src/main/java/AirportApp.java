@@ -14,7 +14,7 @@ public class AirportApp {
         }
 
         Job job = Job.getInstance();
-        job.setJarByClass(AirportsApp.class);
+        job.setJarByClass(AirportApp.class);
         job.setJobName("Airports JoinJob");
 
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirpotrMapper.class);
