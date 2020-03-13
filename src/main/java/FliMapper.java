@@ -17,8 +17,13 @@ public class FliMapper extends Mapper<> {
             if(!line[DEST_AEROPORT_ID].equals("")
                     && (!line[ARR_DELAY_NEW].equals(""))
                         && parseInt(line[ARR_DELAY_NEW]) > 0){
-                
+                AirWritable m_write = new AirWritable();
+                m_write.setFlag(1);
+                m_write.setCode(parseInt(line[DEST_AEROPORT_ID]));
+                Text 
             }
+
+
 
 
             {
