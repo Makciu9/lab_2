@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import static java.lang.Integer.parseInt;
 
-public class AirpotrMapper {
+public class AirportMapper {
 
         private static final int CODE = 0;
         private static final int DESCRIPTION = 1;
@@ -22,8 +22,7 @@ public class AirpotrMapper {
                     Text time = new Text(line[DESCRIPTION]);
                     context.write(m_write, time);
                 }
-            }
-        }
-    }
 }
+
+
 
