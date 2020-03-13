@@ -9,7 +9,12 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
     protected void reduce(AirWritable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
-        Text systemInfo = new Text(iter.next());
+        Text AirportName = new Text(iter.next().toString());
+        if(iter.hasNext()){
+        int counter = 0;
+        Double min = Double.MAX_VALUE;
+        Double max = Double.MIN_VALUE;
+        Double 
         while (iter.hasNext()) {
             Text call = iter.next();
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
