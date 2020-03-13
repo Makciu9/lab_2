@@ -7,8 +7,7 @@ import java.io.IOException;
 import static java.lang.Integer.parseInt;
 
 public class AirpotrMapper {
-    @Override
-    protected void map(){
+    
         private static final int CANCELLED = 19;
         private static final int DEST_AEROPORT_ID = 14;
         private static final int ARR_DELAY_NEW = 18;
