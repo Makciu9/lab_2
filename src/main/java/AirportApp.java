@@ -9,7 +9,7 @@ import java.nio.file.Path;
 public class AirportApp {
     public static void main(String[] args) {
         if (args.length != 3) {
-            System.err.println("Usage: WordCountApp <input Air> <input Fli> <output path>");
+            System.err.println("Usage: AirportApp <input Air> <input Fli> <output path>");
             System.exit(-1);
         }
 
