@@ -16,7 +16,7 @@ public class AirportApp {
             System.exit(-1);
         }
 
-        Job job = Job.;
+        Job job = Job.get;
         job.setJarByClass(AirportApp.class);
         job.setJobName("Airports JoinJob");
 
