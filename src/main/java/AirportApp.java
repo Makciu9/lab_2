@@ -12,7 +12,7 @@ public class AirportApp {
 
         Job job = Job.getInstance();
         job.setJarByClass(AirportsApp.class);
-        job.setJobName("JoinJob sort");
+        job.setJobName("Airports JoinJob");
 
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, CallsJoinMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
