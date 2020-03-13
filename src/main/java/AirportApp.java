@@ -8,7 +8,8 @@ import java.nio.file.Path;
 
 public class AirportApp {
     public static void main(String[] args) {
-
+        if (args.length != 2) {
+        }
 
         Job job = Job.getInstance();
         job.setJarByClass(AirportsApp.class);
