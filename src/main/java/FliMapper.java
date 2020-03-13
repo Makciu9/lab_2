@@ -15,7 +15,7 @@ public class FliMapper extends Mapper<LongWritable, Text, AirWritable, Text> {
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 
         String[] line = value.toString().split(",");
-        if(!line[0]=="\"YEAR\""){
+        if(!line[0].equals("\"YEAR\"")){
         if (parseInt(line[CANCELLED]) == 0) {
             if (!line[DEST_AEROPORT_ID].equals("")
                     && (!line[ARR_DELAY_NEW].equals(""))
