@@ -28,6 +28,7 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
             }
             sum += currVal;
             counter++;
+            
 
         }
     }
