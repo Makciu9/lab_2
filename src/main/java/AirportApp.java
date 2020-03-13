@@ -8,7 +8,7 @@ import javax.xml.soap.Text;
 import java.nio.file.Path;
 
 public class AirportApp {
-    public static void main(String[] args) throws  {
+    public static void main(String[] args) throws Exception {
         if (args.length != 3) {
             System.err.println("Usage: AirportApp <input Air> <input Fli> <output path>");
             System.exit(-1);
