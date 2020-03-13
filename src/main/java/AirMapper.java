@@ -19,8 +19,8 @@ public class AirMapper {
                     AirWritable m_write = new AirWritable();
                     m_write.setFlag(0);
                     m_write.setCode(parseInt(line[CODE]));
-                    Text time = new Text(line[DESCRIPTION]);
-                    context.write(m_write, time);
+                    Text type = new Text(line[DESCRIPTION]);
+                    context.write(m_write, type);
                 }
 }
         
