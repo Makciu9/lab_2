@@ -18,7 +18,7 @@ public class AirpotrMapper {
 
                     AirWritable m_write = new AirWritable();
                     m_write.setFlag(0);
-                    m_write.setCode(parseInt(line[DEST_AEROPORT_ID]));
+                    m_write.setCode(parseInt(line[DESCRIPTION]));
                     Text time = new Text(line[ARR_DELAY_NEW]);
                     context.write(m_write, time);
                 }
