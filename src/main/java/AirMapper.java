@@ -1,11 +1,12 @@
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
 import static java.lang.Integer.parseInt;
 
-public class AirMapper<LongWritable, Text, AirWritable, Text> {
+public class AirMapper extends Mapper<LongWritable, Text, AirWritable, Text> {
 
         private static final int CODE = 0;
         private static final int DESCRIPTION = 1;
