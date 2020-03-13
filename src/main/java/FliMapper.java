@@ -4,7 +4,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import static java.lang.Integer.parseInt;
 
-public class FliMapper extends Mapper<> {
+public class FliMapper extends Mapper<LongWritable, Text, AirWritable, Text> {
     private static final int CANCELLED = 19;
     private static final int DEST_AEROPORT_ID = 14;
     private static final int ARR_DELAY_NEW = 18;

@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import static java.lang.Integer.parseInt;
 
-public class AirMapper {
+public class AirMapper<LongWritable, Text, AirWritable, Text> {
 
         private static final int CODE = 0;
         private static final int DESCRIPTION = 1;
