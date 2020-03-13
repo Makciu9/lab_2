@@ -17,6 +17,7 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
         Double currVal;
         while (iter.hasNext()) {
             currVal = new Double(iter.next().toString());
+            
 
         }
     }
