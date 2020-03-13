@@ -22,12 +22,12 @@ public class AirportApp {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FliMapper.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
-        
+
         job.setPartitionerClass(AirPartitioner.class);
         job.setGroupingComparatorClass(GroupingComparator.class);
         job.setReducerClass(JoinReducer.class);
 
-        job.setMapOutputKeyClass(TextPair.class);
+        job.setMapOutputKeyClass(AirWritable.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
 
