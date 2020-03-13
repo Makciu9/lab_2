@@ -13,7 +13,10 @@ public class FliMapper extends Mapper<> {
 
         String[] line = value.toString().split(",");
         if(parseInt(line[CANCELLED]) == 0){
-            if(!DEST_AEROPORT_ID)
+            if(!line[DEST_AEROPORT_ID].equals("")
+                    && line[]){
+
+            }
         }
 
     }
