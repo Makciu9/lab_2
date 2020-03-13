@@ -17,7 +17,7 @@ public class AirportApp {
         job.setJarByClass(AirportApp.class);
         job.setJobName("Airports JoinJob");
 
-        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirpotrMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, FliMapper.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
