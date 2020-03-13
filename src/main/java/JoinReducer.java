@@ -14,7 +14,7 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
         int counter = 0;
         Double min = Double.MAX_VALUE;
         Double max = Double.MIN_VALUE;
-        Double
+        Double currVal;
         while (iter.hasNext()) {
             Text call = iter.next();
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
