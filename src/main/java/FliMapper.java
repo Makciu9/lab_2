@@ -16,7 +16,7 @@ public class FliMapper extends Mapper<LongWritable, Text, AirWritable, Text> {
 
         String[] line = value.toString().split(",");
         if(!line[0].equals("\"YEAR\"")){
-        if (parseInt(line[CANCELLED]) == 0) {
+        if (Float.parseFloat(line[CANCELLED]) == (float) 0) {
             if (!line[DEST_AEROPORT_ID].equals("")
                     && (!line[ARR_DELAY_NEW].equals(""))
                     && parseInt(line[ARR_DELAY_NEW]) > 0) {
