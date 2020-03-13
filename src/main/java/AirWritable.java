@@ -26,12 +26,32 @@ public class AirWritable implements WritableComparable {
 
     @Override
     public int compareTo(Object o) {
+        AirWritable m = (AirWritable) o;
+        int m_flag = m.flag;
+        int m_code = m.code;
+
+        if(this.code > m_code){
+            return 1;
+        }
+
+        if(this.code < m_code){
+            return -1;
+        }
+
+        if(this.flag > m_flag){
+            return 1;
+        }
+
+        if(this.flag < m_flag){
+            return -1;
+        }
         return 0;
     }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
+        dataOutput.writeInt(flag);
+        dataOutput.writeInt(code);
     }
 
     @Override
