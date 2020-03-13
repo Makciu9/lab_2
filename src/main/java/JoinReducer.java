@@ -12,12 +12,20 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
         String AirportName = iter.next().toString();
         if(iter.hasNext()){
         int counter = 0;
-        Double min = new Double();
+        Double min = Double.parseDouble(iter.next().toString());
         Double max = Double.MIN_VALUE;
         Double currVal;
         while (iter.hasNext()) {
-            currVal = new Double(iter.next().toString());
+            currVal =Double.parseDouble(iter.next().toString());
 
+            if (currVal > max){
+                max = currVal;
+            }
+
+            if (currVal < min){
+                min = currVal;
+            }
+            
 
         }
     }
