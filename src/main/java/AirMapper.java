@@ -12,7 +12,7 @@ public class AirMapper {
         private static final int DESCRIPTION = 1;
 
         @Override
-        protected void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
+        protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 
             String[] line = value.toString().replace("\"","").split(",(!?)");
 
