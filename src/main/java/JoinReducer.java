@@ -15,6 +15,7 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
         Double min = Double.parseDouble(iter.next().toString());
         Double max = Double.MIN_VALUE;
         Double currVal;
+        Double sum;
         while (iter.hasNext()) {
             currVal =Double.parseDouble(iter.next().toString());
 
@@ -25,7 +26,8 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
             if (currVal < min){
                 min = currVal;
             }
-            
+            sum += currVal;
+            counter++;
 
         }
     }
