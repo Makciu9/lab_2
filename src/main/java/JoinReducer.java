@@ -30,10 +30,12 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
             sum += currVal;
             counter++;
         }
-            info += (" =====>>{ " +
-            "Min: " + min + "|" +
+            info += " =====>>{ " +
+                    "Min: " + min + "|" +
                     "Max: " + max + "|" +
                     "AVG: " + sum/counter + "|" +
+                    "}  ";
+        
 
     }
 }
