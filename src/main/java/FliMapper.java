@@ -12,7 +12,7 @@ public class FliMapper extends Mapper<> {
 
         String[] line = value.toString().split(",");
         if(parseInt(line[CANCELLED]) == 0){
-            
+            if(!)
         }
 
     }
