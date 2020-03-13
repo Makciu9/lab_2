@@ -14,7 +14,7 @@ public class AirpotrMapper {
         @Override
         protected void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
 
-            String[] line = value.toString().split(",");
+            String[] line = value.toString().replace("\"","").split(",(!?)");
 
                     AirWritable m_write = new AirWritable();
                     m_write.setFlag(0);
