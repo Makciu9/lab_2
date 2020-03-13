@@ -8,7 +8,9 @@ import java.nio.file.Path;
 
 public class AirportApp {
     public static void main(String[] args) {
-        if (args.length != 2) {
+        if (args.length != 3) {
+            System.err.println("Usage: WordCountApp <input path> <output path>");
+            System.exit(-1);
         }
 
         Job job = Job.getInstance();
