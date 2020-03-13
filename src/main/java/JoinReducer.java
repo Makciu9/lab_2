@@ -31,6 +31,8 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
             counter++;
         }
             info += (" =====>>{ " +
-            "Min: " + min + "|"
+            "Min: " + min + "|" +
+                    "Max: " + max + "|" +
+                    
     }
 }
