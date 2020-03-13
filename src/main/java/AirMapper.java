@@ -14,16 +14,16 @@ public class AirMapper extends Mapper<LongWritable, Text, AirWritable, Text> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 
-            String[] line = value.toString().replace("\"","").split(",(!?)");
-                    if(!line[0]=="")
-                    AirWritable m_write = new AirWritable();
-                    m_write.setFlag(0);
-                    m_write.setCode(parseInt(line[CODE]));
-                    Text type = new Text(line[DESCRIPTION]);
-                    context.write(m_write, type);
+                String[] line = value.toString().replace("\"", "").split(",(!?)");
+                if (!line[0] == "Code") {
+                        AirWritable m_write = new AirWritable();
+                        m_write.setFlag(0);
+                        m_write.setCode(parseInt(line[CODE]));
+                        Text type = new Text(line[DESCRIPTION]);
+                        context.write(m_write, type);
                 }
+        }
+
 }
-        
-    
 
 
