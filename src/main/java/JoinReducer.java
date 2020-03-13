@@ -10,7 +10,7 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         String AirportName = iter.next().toString();
-        String info = "{
+        String info = " =====>>{ ";
         if(iter.hasNext()){
         int counter = 0;
         Double min = Double.parseDouble(iter.next().toString());
@@ -30,6 +30,6 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
             sum += currVal;
             counter++;
         }
-
+            info =
     }
 }
