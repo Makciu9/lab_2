@@ -1,6 +1,7 @@
-FliMapper.class
 AirWritable.class
-AirPartitioner.class
 AirMapper.class
+AirportApp.class
+FliMapper.class
+AirPartitioner.class
 GroupingComparator.class
 JoinReducer.class
