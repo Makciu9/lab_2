@@ -22,7 +22,7 @@ public class AirportApp {
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(AirPartitioner.class);
-        job.setGroupingComparatorClass(TextPair.FirstComparator.class);
+        job.setGroupingComparatorClass(Comparator.class);
         job.setReducerClass(JoinReducer.class);
 
         job.setMapOutputKeyClass(TextPair.class);
