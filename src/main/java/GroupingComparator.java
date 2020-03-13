@@ -5,6 +5,8 @@ public class GroupingComparator {
 
     }
     public int compare(WritableComparable one, WritableComparable two){
-        AirWritable o = WritableComparable one;
+        AirWritable o = (AirWritable) one;
+        AirWritable t = (AirWritable) two;
+        return o.getCode() - t.getCode();
     }
 }
