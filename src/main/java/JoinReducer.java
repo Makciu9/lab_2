@@ -16,7 +16,7 @@ public class JoinReducer extends Reducer<AirWritable, Text, String, String> {
         Double max = Double.MIN_VALUE;
         Double currVal;
         while (iter.hasNext()) {
-            currVal = parseFloat( )
+            currVal = new Double()
 
         }
     }
