@@ -7,6 +7,6 @@ public class AirPartitioner extends Partitioner<AirWritable, Text> {
 
     @Override
     public int getPartition(AirWritable airWritable, Text text, int i) {
-        return 
+        return airWritable.getCode() % i;
     }
 }
